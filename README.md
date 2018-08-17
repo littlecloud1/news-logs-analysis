@@ -1,6 +1,6 @@
 **Author**: Lai Man Tang
 
-**Github**: [https://github.com/littlecloud1]
+**Github**: https://github.com/littlecloud1
 
 **Date**: 2018-8-16
 
@@ -33,7 +33,8 @@ and a output file: **newsreport.txt**
 Also, you need to download **newsdata.sql** and import it into database
 [newsdata.sql](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip)
 
-To import it into database:
+
+#### To import it into database:
 
 psql -d news -f newsdata.sql
 
@@ -42,19 +43,17 @@ psql -d news -f newsdata.sql
 Before running this project you have to create a view inside the datebase:
 
 CREATE VIEW articlesLog AS
-
 SELECT au.name AS author,
        a.title,
        l.id AS logID,
        l.status AS logStatus
-
 FROM log AS l,
       articles AS a,
       authors AS au
-
 WHERE l.path LIKE CONCAT('%/', a.slug) 
       AND au.id = a.author;
 
-To run this project:
+
+#### To run this project:
 
 python news-report.py
