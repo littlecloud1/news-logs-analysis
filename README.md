@@ -2,8 +2,7 @@
 **Github**: [https://github.com/littlecloud1]
 **Date: 2018-8-16
 
-##Project
-
+## Project
 --------------------------------------------------------------
 This project aims to analysis the 'news' database
 and get the results of :
@@ -12,8 +11,7 @@ and get the results of :
   3. the day that has more than 1% of requests lead to errors
 
 
-##Requirements
-
+## Requirements
 --------------------------------------------------------------
 To Run this program, you have to install following softwares:
 
@@ -22,8 +20,7 @@ To Run this program, you have to install following softwares:
   * psycopg2
 
 
-##Files
-
+## Files
 --------------------------------------------------------------
 include two codes file: **news-report.py, newsdb.py**
 and output file: **newsreport.txt**
@@ -41,8 +38,7 @@ To import it into database:
 psql -d news -f newsdata.sql
 
 
-##How to Run
-
+## How to Run
 --------------------------------------------------------------
 Before running this project you have to create a view inside the datebase:
 
