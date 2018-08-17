@@ -1,24 +1,29 @@
-Author: Lai Man Tang
-github: [link](https://github.com/littlecloud1)
-date: 2018-8-16
+**Author**: Lai Man Tang
+**Github**: [https://github.com/littlecloud1]
+**Date: 2018-8-16
 
-#Project
-=============================================================
+##Project
+
+--------------------------------------------------------------
 This project aims to analysis the 'news' database
 and get the results of :
-1. the most popular three articles of all time
-2. the most popular article authors of all time
-3. the day that has more than 1% of requests lead to errors
+  1. the most popular three articles of all time
+  2. the most popular article authors of all time
+  3. the day that has more than 1% of requests lead to errors
 
 
-##Requirement
+##Requirements
+
 --------------------------------------------------------------
-* Python3
-* PostgreSQL
-* psycopg2
+To Run this program, you have to install following softwares:
+
+  * Python3
+  * PostgreSQL
+  * psycopg2
 
 
 ##Files
+
 --------------------------------------------------------------
 include two codes file: **news-report.py, newsdb.py**
 and output file: **newsreport.txt**
@@ -29,14 +34,15 @@ and output file: **newsreport.txt**
 
 **newsreport.txt**: it contains three result reports
 
-Also, you need to download **newsdata.sql** and
-newsdata.sql[link](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip)
+Also, you need to download **newsdata.sql** 
+[newsdata.sql](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip)
 
 To import it into database:
 psql -d news -f newsdata.sql
 
 
 ##How to Run
+
 --------------------------------------------------------------
 Before running this project you have to create a view inside the datebase:
 
