@@ -30,18 +30,17 @@ and a output file: **newsreport.txt**
 
 **newsreport.txt**: it is a example report that contains three analysis results 
 
-Also, you need to download **newsdata.sql** and import it into database
+## Build Setup
+You need to download **newsdata.sql** and import it into database
 [newsdata.sql](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip)
-
 
 #### To import it into database:
 
-psql -d news -f newsdata.sql
+`psql -d news -f newsdata.sql`
 
-
-## How to Run
 Before running this project you have to create a view inside the datebase:
 
+```sql
 CREATE VIEW articlesLog AS
 SELECT au.name AS author,
        a.title,
@@ -52,8 +51,8 @@ FROM log AS l,
       authors AS au
 WHERE l.path LIKE CONCAT('%/', a.slug) 
       AND au.id = a.author;
+```
 
+## How to run
 
-#### To run this project:
-
-python news-report.py
+`python news-report.py`
