@@ -1,6 +1,6 @@
 **Author**: Lai Man Tang
 
-**Github**: https://github.com/littlecloud1
+**Github**: https://github.com/littlecloud1/news-logs-analysis
 
 **Date**: 2018-8-16
 
@@ -34,9 +34,10 @@ and a output file: **newsreport.txt**
 You need to download **newsdata.sql** and import it into database
 [newsdata.sql](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip)
 
-#### To import it into database:
-
-`psql -d news -f newsdata.sql`
+```bash
+# Import Database:
+psql -d news -f newsdata.sql
+```
 
 Before running this project you have to create a view inside the datebase:
 
@@ -55,4 +56,6 @@ WHERE l.path LIKE CONCAT('%/', a.slug)
 
 ## How to run
 
-`python news-report.py`
+```bash
+python news-report.py
+```
